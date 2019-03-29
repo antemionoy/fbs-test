@@ -1,0 +1,215 @@
+ @import "partials/vars";
+ @import "partials/mixin";
+
+
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ *:before,
+ *:after {
+     box-sizing: border-box;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ p {
+     margin: 0px 0px 10px;
+ }
+
+ body {
+     font-family: $font-openSans;
+     min-width: 320px;
+     font-size: rem(18px);
+     line-height: normal;
+     background-color: #ffffff;
+     color: $color-dark;
+ }
+
+ .wrapper {
+     width: 100%;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .main {
+     position: relative;
+     width: 100%;
+     flex: 1;
+ }
+
+ .d-flex {
+     display: flex;
+ }
+
+ .wrap {
+     flex-wrap: wrap;
+ }
+
+ a,
+ button {
+     cursor: pointer;
+ }
+
+ .responsive-img {
+     max-width: 100%;
+     height: auto;
+ }
+
+ .overflow {
+     overflow: hidden;
+ }
+
+ .container {
+     max-width: 980px;
+     margin: 0 auto;
+     padding-left: $spacing;
+     padding-right: $spacing;
+ }
+
+ .row {
+     margin-left: -$spacing;
+     margin-right: -$spacing;
+     list-style: none;
+ }
+
+ .col {
+     padding-left: $spacing;
+     padding-right: $spacing;
+ }
+
+ .col-1 {
+     width: 8.33333333%;
+ }
+
+ .col-2 {
+     width: 16.66666667%;
+ }
+
+ .col-3 {
+     width: 25%;
+ }
+
+ .col-4 {
+     width: 33.33%;
+ }
+
+ .col-5 {
+     width: 41.66666667%;
+ }
+
+ .col-6 {
+     width: 50%;
+ }
+
+ .col-7 {
+     width: 58.33%;
+ }
+
+ .col-8 {
+     width: 66.66%;
+ }
+
+ .col-9 {
+     width: 75%;
+ }
+
+ .col-10 {
+     width: 83.33%;
+ }
+
+ .col-11 {
+     width: 91.66%;
+ }
+
+ .col-12 {
+     width: 100%;
+ }
+
+ .responsive-img {
+     max-width: 100%;
+     height: auto;
+ }
+
+ .header {
+     padding: 15px 0px;
+
+     &__logo {
+         height: auto;
+     }
+
+     &__container{
+        justify-content: center;
+     }
+ }
+
+ .content{
+    margin: 20px 0px 0px;
+
+    &__item{
+        height: 200px;
+        min-width: 200px;
+        background-color: $color-primary;
+
+        &_hidden{
+            height: 0;
+        }
+    }
+
+    &__col{
+        margin: 20px 0px 0px;
+        flex: 1 0;
+    }
+ }
+
+ .content:hover .content__item:not(:hover){
+    background-color: $color-primary;
+ }
+
+ .content:hover .content__item{
+    background-color: $color-dark;
+ }
+
+ .form{
+    &__checkbox{
+
+        &_hidden{
+            visibility: hidden;
+        }
+    }
+
+    &__hidden{
+        visibility: hidden;
+
+
+        &_show{
+            visibility: visible;
+        }
+    }
+
+    &__alert{
+        color: $color-warning;
+        display: none;
+
+        &_show{
+            display: block;
+        }
+    }
+ }
+
+
+ .feedback{
+    margin: 20px 0px 0px;
+
+    &__select{
+        width: 100%;
+    }
+ }
+
+
+ @import "partials/media";
